@@ -22,7 +22,7 @@
  SOFTWARE.
  */
 package co.frontyard.cordova.plugin.exoplayer;
-
+import com.myApplication.R; // replace with app Java.R
 import android.app.*;
 import android.content.*;
 import android.media.*;
@@ -232,11 +232,26 @@ public class Player {
         dialog.setContentView(mainLayout);
         dialog.show();
 
+        // -----  custom close button  -----
+        ImageButton close_button = mainLayout.findViewById(R.id.exo_close);
+        close_button.setOnClickListener(ClickListener);
+        
         dialog.getWindow().setAttributes(LayoutProvider.getDialogLayoutParams(activity, config, dialog));
         exoView.requestFocus();
         exoView.setOnTouchListener(onTouchListener);
         LayoutProvider.setupController(exoView, activity, config.getController());
     }
+
+    private View.OnClickListener ClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            int btn = v.getId();
+            if (btn == R.id.exo_close) {
+                // -----  close button was clicked  -----
+                close();
+            }
+        }
+    };
 
     private int setupAudio() {
         activity.setVolumeControlStream(AudioManager.STREAM_MUSIC);

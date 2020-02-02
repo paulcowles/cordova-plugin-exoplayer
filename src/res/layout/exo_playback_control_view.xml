@@ -7,6 +7,22 @@
     android:layoutDirection="ltr"
     android:orientation="vertical">
 
+    <!-- Control close button -->
+    <LinearLayout
+        android:id="@+id/exo_backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/exo_close"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            style="@style/Exo.Close"/>
+    </LinearLayout>
+
     <!-- Control button bar -->
     <LinearLayout
         android:id="@id/exo_buttons"
@@ -70,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:textSize="28dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:includeFontPadding="false"
                 android:textColor="@color/foreground_color"/>
@@ -81,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
-                android:textSize="20dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:includeFontPadding="false"
                 android:textColor="@color/foreground_color"/>

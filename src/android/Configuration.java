@@ -67,15 +67,15 @@ public class Configuration {
     }
 
     public int getHideTimeout() {
-        return config.optInt("hideTimeout", 5000); // Default 5 sec.
+        return config.optInt("hideTimeout", 3000); // Default 3 sec.
     }
 
     public int getForwardTimeMs() {
-        return config.optInt("forwardTime", 60000); // Default 1 min.
+        return config.optInt("forwardTime", 10000); // Default 10 sec.
     }
 
     public int getRewindTimeMs() {
-        return config.optInt("rewindTime", 60000); // Default 1 min.
+        return config.optInt("rewindTime", 10000); // Default 10 sec.
     }
 
     public String getSubtitleUrl() {

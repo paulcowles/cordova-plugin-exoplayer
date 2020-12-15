@@ -19,7 +19,11 @@
     </js-module>
 
     <platform name="android">
-        <framework src="com.google.android.exoplayer:exoplayer:2.6.1"/>
+        <framework src="com.google.android.exoplayer:exoplayer-core:2.6.1"/>
+        <framework src="com.google.android.exoplayer:exoplayer-ui:2.6.1"/>
+        <framework src="com.google.android.exoplayer:exoplayer-hls:2.6.1"/>
+        <framework src="com.google.android.exoplayer:exoplayer-smoothstreaming:2.6.1"/>
+        <framework src="com.google.android.exoplayer:exoplayer-dash:2.6.1"/>
         <framework src="com.squareup.picasso:picasso:2.5.2"/>
 
         <config-file target="res/xml/config.xml" parent="/*">
